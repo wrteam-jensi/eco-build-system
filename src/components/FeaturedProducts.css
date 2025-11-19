@@ -1,0 +1,125 @@
+/**
+ * FeaturedProducts Component Styles
+ * Matches Figma design specifications
+ * Light grey background, 3x2 product grid, centered layout
+ */
+
+/* Featured Products Section */
+.featured-products {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  background: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Section Header */
+.featured-products-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+/* "FEATURED PRODUCTS" Label - Small, light grey */
+.featured-products-label {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* "Recommended for you" Title - Large, dark grey, bold */
+.featured-products-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 140%;
+  color: #161E2D;
+  margin: 0;
+  text-align: center;
+}
+
+/* Products Grid - 3 columns, 2 rows */
+.products-grid {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0 auto;
+}
+
+/* Responsive: 2 columns on medium screens */
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: 1 column on small screens */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .featured-products {
+    padding: 60px 20px;
+  }
+  
+  .featured-products-title {
+    font-size: 28px;
+  }
+}
+
+/* View All Products Button Container */
+.view-all-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* View All Products Button - Light blue background, white text */
+.view-all-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 40px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+  cursor: pointer;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  color: #FFFFFF;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.view-all-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.view-all-button:active {
+  transform: translateY(0);
+}
+
+/* Arrow Icon */
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+

@@ -1,0 +1,111 @@
+/**
+ * WhyChoose Component Styles
+ * Split layout with large image + stacked cards
+ */
+
+.why-choose-section {
+  width: 100%;
+  padding: 90px 40px 120px;
+  background: #f5f8ff;
+  display: flex;
+  justify-content: center;
+}
+
+.why-choose-container {
+  width: 100%;
+  max-width: 1440px;
+  background: #ffffff;
+  border-radius: 36px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 25px 60px rgba(12, 60, 105, 0.1);
+}
+
+.why-choose-image {
+  background-image: url('https://images.unsplash.com/photo-1431576901776-e539bd916ba2?w=1200&h=900&fit=crop');
+  background-size: cover;
+  background-position: center;
+  min-height: 480px;
+}
+
+.why-choose-content {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.benefit-label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #32a4d8;
+  font-weight: 700;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.benefit-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 36px;
+  color: #1c3144;
+}
+
+.benefit-description {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  color: #5b6775;
+  line-height: 170%;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.benefit-card {
+  display: flex;
+  gap: 16px;
+  background: #f8fbff;
+  border-radius: 20px;
+  padding: 18px 20px;
+  border: 1px solid #d9e6f4;
+}
+
+.benefit-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #32a4d8;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.benefit-card-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  color: #1c3144;
+  margin-bottom: 4px;
+}
+
+.benefit-card-text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 15px;
+  color: #56606e;
+  line-height: 150%;
+}
+
+@media (max-width: 1024px) {
+  .why-choose-container {
+    grid-template-columns: 1fr;
+  }
+
+  .why-choose-content {
+    padding: 40px 28px;
+  }
+}
+

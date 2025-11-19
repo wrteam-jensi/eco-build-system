@@ -1,0 +1,59 @@
+/**
+ * Floating Icons Component Styles
+ * Exact measurements from Figma design
+ * Three circular icons stacked vertically on the right side
+ */
+
+/* Floating Icons Container */
+.floating-icons {
+  width: 74px;
+  position: absolute;
+  top: 334px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 100;
+}
+
+/* Base Floating Icon Style */
+.floating-icon {
+  width: 74px;
+  height: 74px;
+  border: 2.5px solid #345766;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.floating-icon:hover {
+  background: #FFFFFF;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.floating-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Translate Icon - Speech bubble with star/gear */
+.translate-icon {
+  /* Uses base .floating-icon styles */
+}
+
+/* Swirl/Logo Icon - Interconnected swirl design */
+.swirl-icon {
+  /* Uses base .floating-icon styles */
+}
+
+/* Scroll to Top Icon - Upward arrow */
+.scroll-top-icon {
+  /* Uses base .floating-icon styles */
+}
+

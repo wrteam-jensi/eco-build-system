@@ -1,0 +1,390 @@
+/**
+ * Header Component Styles
+ * Exact measurements from Figma with responsive fallbacks
+ */
+
+/* Main Header Container */
+.header {
+    width: auto;
+    background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+    opacity: 1;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    overflow: visible;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Menu Container */
+.menu-container {
+    width: 100%;
+    max-width: 1920px;
+    height: 104.8px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    padding: 0 0 10 40px;
+    box-sizing: border-box;
+}
+
+/* Logo Section */
+.logo-section {
+    width: 612px;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Panel */
+.logo-panel {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+    background: #ffffff;
+    clip-path: polygon(0 0, 100% 0, calc(100% - 35px) 100%, 0 100%);
+    padding: 0 60px 0 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.logo-image {
+    display: block;
+    object-fit: contain;
+}
+
+.ecobuild-logo {
+    width: clamp(200px, 23.5vw, 451px);
+    height: auto;
+    max-height: 100%;
+}
+
+.nudura-logo {
+    width: clamp(120px, 9vw, 172px);
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-divider {
+    width: 1px;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.mobile-menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 1px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+/* Menu Item */
+.menu-item {
+    min-width: 96px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    padding: 0 4px;
+}
+
+.menu-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #345766;
+}
+
+.menu-item:hover {
+    opacity: 0.8;
+}
+
+.products-menu {
+    position: relative;
+}
+
+.menu-arrow {
+    font-size: 10px;
+    margin-left: 2px;
+    color: #345766;
+}
+
+/* Products Submenu */
+.products-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.menu-item.open .products-submenu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.submenu-item {
+    padding: 8px 20px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    color: #161E2D;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submenu-item:hover {
+    background: #F0F0F0;
+}
+
+/* Professional Portal Button */
+.professional-portal-btn {
+    width: 220px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 9999px;
+    padding: 11px 20px;
+    background: #345766;
+    border: none;
+    cursor: pointer;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.professional-portal-btn:hover {
+    opacity: 0.9;
+}
+
+.professional-portal-btn--mobile {
+    display: none;
+    width: 100%;
+    margin-top: 12px;
+    justify-content: center;
+}
+
+.professional-portal-btn--desktop {
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.portal-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1440px) {
+    .header {
+        padding: 0;
+    }
+
+    .logo-panel {
+        padding-right: 40px;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .menu-container {
+        gap: 16px;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-menu.nav-open {
+        max-height: 600px;
+        opacity: 1;
+        padding-top: 12px;
+    }
+
+    .menu-item {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .menu-trigger {
+        justify-content: space-between;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .menu-item:last-of-type .menu-trigger {
+        border-bottom: none;
+    }
+
+    .products-submenu {
+        position: static;
+        margin-top: 0;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 0;
+        box-shadow: none;
+        width: 100%;
+        opacity: 1;
+        pointer-events: auto;
+        transform: none;
+    }
+
+    .submenu-item {
+        color: #ffffff;
+        padding: 10px 0 10px 16px;
+    }
+
+    .professional-portal-btn--desktop {
+        display: none;
+    }
+
+    .professional-portal-btn--mobile {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 0 20px;
+        height: auto;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+    }
+
+    .logo-section {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo-panel {
+        width: 100%;
+        clip-path: none;
+        border-radius: 16px;
+        padding: 0 24px;
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0 16px;
+    }
+
+    .logo-panel {
+        padding: 0 16px;
+        gap: 16px;
+    }
+
+    .ecobuild-logo {
+        width: 150px;
+    }
+
+    .nudura-logo {
+        width: 90px;
+    }
+
+    .menu-trigger {
+        font-size: 15px;
+    }
+}

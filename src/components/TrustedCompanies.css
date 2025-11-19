@@ -1,0 +1,35 @@
+/**
+ * Trusted Companies Styles
+ */
+.trusted-section{
+  width:100%;
+  padding:60px 40px;
+  text-align:center;
+  background:#ffffff;
+}
+.trusted-caption{
+  font-family:'Noto Sans',sans-serif;
+  font-size:16px;
+  color:#1c3144;
+  margin-bottom:30px;
+}
+.trusted-logos{
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.trusted-logo{
+  flex:1 1 140px;
+  min-width:120px;
+  padding:20px;
+  border-radius:12px;
+  border:1px solid #e0e8f2;
+  color:#9aa5b8;
+  font-weight:600;
+  text-transform:uppercase;
+  font-size:13px;
+}
+

@@ -1,0 +1,52 @@
+/**
+ * Global Styles
+ * Includes Google Fonts import for Noto Sans and Manrope
+ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800&family=Manrope:wght@400;600;700;800&display=swap');
+
+:root {
+  font-family: 'Noto Sans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1920px;
+  min-height: 100vh;
+  overflow-x: auto;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+button {
+  font-family: 'Noto Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid #345766;
+  outline-offset: 2px;
+}

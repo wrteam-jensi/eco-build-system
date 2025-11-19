@@ -1,0 +1,34 @@
+/* Card Base Styles */
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-default {
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card-elevated {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card-outlined {
+    border: 2px solid #4FC3F7;
+}
+
+/* Hoverable Cards */
+.card-hoverable {
+    cursor: pointer;
+}
+
+.card-hoverable:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.card-hoverable:active {
+    transform: translateY(-2px);
+}

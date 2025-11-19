@@ -1,0 +1,23 @@
+/**
+ * App Layout Styles
+ * Exact measurements from Figma design
+ */
+
+/* Main App Container - Wraps all sections */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main App Layout Container - Header and Hero section */
+.app-layout {
+  width: 1920px;
+  height: 950px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  opacity: 1;
+  flex-shrink: 0;
+}

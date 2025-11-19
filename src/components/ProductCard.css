@@ -1,0 +1,115 @@
+/**
+ * ProductCard Component Styles
+ * Matches Figma design specifications
+ * White background for image, light blue background for details
+ */
+
+/* Product Card Container */
+.product-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: #FFFFFF;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image Container - White background */
+.product-image-container {
+  width: 100%;
+  height: 200px;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.product-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+}
+
+/* Product Details Section - Light blue background */
+.product-details {
+  background: linear-gradient(0deg, rgba(0, 212, 255, 0.1) -12.5%, rgba(0, 163, 224, 0.1) 104.03%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Product Title */
+.product-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #161E2D;
+  margin: 0;
+  text-align: left;
+}
+
+/* Product Info */
+.product-info {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #666;
+  text-align: left;
+}
+
+/* Rating Section */
+.product-rating-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* Star Rating */
+.product-rating {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.star-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Reviews Text */
+.product-reviews {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #666;
+}
+
+

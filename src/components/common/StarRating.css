@@ -1,0 +1,55 @@
+/* Star Rating Styles */
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    display: inline-block;
+    line-height: 1;
+}
+
+.star-filled {
+    color: #FFC107;
+}
+
+.star-empty {
+    color: #E2E8F0;
+}
+
+.review-count {
+    font-size: 14px;
+    color: #718096;
+    font-weight: 500;
+}
+
+/* Sizes */
+.star-rating-small .star {
+    font-size: 14px;
+}
+
+.star-rating-small .review-count {
+    font-size: 12px;
+}
+
+.star-rating-medium .star {
+    font-size: 18px;
+}
+
+.star-rating-medium .review-count {
+    font-size: 14px;
+}
+
+.star-rating-large .star {
+    font-size: 24px;
+}
+
+.star-rating-large .review-count {
+    font-size: 16px;
+}

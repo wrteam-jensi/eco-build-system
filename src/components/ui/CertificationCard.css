@@ -1,0 +1,64 @@
+/* CertificationCard Styles */
+.certification-card {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 24px;
+    min-height: 380px;
+    border: 2px solid #E2E8F0;
+    transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+    border-color: #4FC3F7;
+}
+
+.certification-card-logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.certification-card-logo img {
+    max-width: 140px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.certification-card-content {
+    flex: 1;
+    text-align: center;
+}
+
+.certification-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2D3748;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+.certification-card-org {
+    font-size: 13px;
+    color: #718096;
+    margin: 0 0 16px 0;
+    font-weight: 500;
+}
+
+.certification-card-description {
+    font-size: 14px;
+    color: #4A5568;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.certification-card-footer {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.certification-card-footer .btn {
+    min-width: 140px;
+}

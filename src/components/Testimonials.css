@@ -1,0 +1,129 @@
+/**
+ * Testimonials Component Styles
+ * Light blue background with card carousel styling
+ */
+
+.testimonials-section {
+  width: 100%;
+  padding: 90px 40px 70px;
+  background: #edf4fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.testimonials-header {
+  text-align: center;
+  max-width: 760px;
+}
+
+.testimonials-label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  color: #32a4d8;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.testimonials-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 36px;
+  color: #1c3144;
+  margin: 12px 0;
+}
+
+.testimonials-subtitle {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  color: #6c7a89;
+  line-height: 160%;
+}
+
+.testimonials-cards {
+  width: 100%;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 40px rgba(13, 40, 80, 0.08);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.testimonial-quote {
+  font-size: 54px;
+  color: #32a4d8;
+  line-height: 1;
+}
+
+.testimonial-text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  color: #34404f;
+  line-height: 170%;
+  flex: 1;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d9e8f5, #fff);
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.testimonial-author {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  color: #1c3144;
+}
+
+.testimonial-role {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  color: #7c8a9a;
+}
+
+.testimonial-stars {
+  color: #ffc947;
+  font-size: 14px;
+}
+
+.testimonials-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cfdbe7;
+}
+
+.dot.active {
+  width: 24px;
+  border-radius: 4px;
+  background: #32a4d8;
+}
+
