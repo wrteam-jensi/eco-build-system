@@ -19,13 +19,12 @@
 /* Menu Container */
 .menu-container {
     width: 100%;
-    max-width: 1920px;
     height: 104.8px;
     position: relative;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
     flex-wrap: nowrap;
     padding: 0 0 10 40px;
     box-sizing: border-box;
@@ -123,7 +122,6 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    flex: 1;
     justify-content: flex-start;
   }
 
@@ -248,7 +246,7 @@
 
 .professional-portal-btn--desktop {
     flex-shrink: 0;
-    margin-left: auto;
+    margin-left: 0;
 }
 
 .portal-icon {
