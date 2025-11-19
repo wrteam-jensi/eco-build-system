@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
-// import Hero from './components/Hero';
-// import FloatingIcons from './components/FloatingIcons';
+import Hero from './components/Hero';
+import FloatingIcons from './components/FloatingIcons';
 // import FeaturedProducts from './components/FeaturedProducts';
 // import TrustedCompanies from './components/TrustedCompanies';
 // import BlogSection from './components/BlogSection';
@@ -22,8 +22,8 @@ function App() {
     <div className="app-container">
       <div className="app-layout">
         <Header />
-        {/* <Hero />
-        <FloatingIcons /> */}
+        <Hero />
+        <FloatingIcons />
       </div>
       {/* <FeaturedProducts />
       <TrustedCompanies />

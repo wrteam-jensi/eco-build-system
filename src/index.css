@@ -26,17 +26,16 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 1920px;
   min-height: 100vh;
-  overflow-x: auto;
+  width: 100%;
+  background: #fff;
+  overflow-x: hidden;
 }
 
 #root {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display: block;
 }
 
 button {

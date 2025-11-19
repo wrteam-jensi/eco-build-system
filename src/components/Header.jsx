@@ -49,18 +49,18 @@ const Header = () => {
         {/* Logo Section */}
         <div className="logo-section">
           <div className="logo-panel">
-
             <img
               src={nuduraLogo}
-              alt="Nudura logo"
-               className="logo-image ecobuild-logo"
-              
+              alt="Ecobuild logo"
+              className="logo-image ecobuild-logo"
               loading="lazy"
             />
+            <div className="logo-divider" role="presentation" />
             <img
-              src={ecobuildLogo}
-              alt="Ecobuild logo"
-             className="logo-image nudura-logo"
+                           src={ecobuildLogo}
+
+              alt="Nudura logo"
+              className="logo-image nudura-logo"
               loading="lazy"
             />
           </div>
@@ -117,7 +117,7 @@ const Header = () => {
                     }
                   }}
                 >
-                  <span style={{ color: '#345766' , fontSize: '16px', fontWeight:'bold'}}>{item.label}</span>
+                  <span className="menu-label">{item.label}</span>
                   {showChevron && (
                     <span className="menu-arrow">
                       <DownChevron />
