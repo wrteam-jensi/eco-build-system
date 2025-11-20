@@ -51,16 +51,15 @@ const Header = () => {
           <div className="logo-panel">
             <img
               src={nuduraLogo}
-              alt="Ecobuild logo"
-              className="logo-image ecobuild-logo"
+              alt="Nudura logo"
+              className="logo-image nudura-logo"
               loading="lazy"
             />
             <div className="logo-divider" role="presentation" />
             <img
-                           src={ecobuildLogo}
-
-              alt="Nudura logo"
-              className="logo-image nudura-logo"
+              src={ecobuildLogo}
+              alt="Ecobuild logo"
+              className="logo-image ecobuild-logo"
               loading="lazy"
             />
           </div>
@@ -128,12 +127,17 @@ const Header = () => {
                 {hasSubmenu && (
                   <div
                     id={submenuId}
-                    className="products-submenu"
+                    className={`products-submenu ${isDropdownOpen ? 'open' : ''}`}
                     role="menu"
                     aria-label={`${item.label} submenu`}
                   >
                     {item.subItems.map((subItem) => (
-                      <div key={subItem} className="submenu-item" role="menuitem">
+                      <div 
+                        key={subItem} 
+                        className="submenu-item" 
+                        role="menuitem"
+                        onClick={closeMobileMenu}
+                      >
                         {subItem}
                       </div>
                     ))}
