@@ -1,61 +1,63 @@
 import React from 'react';
+import buildSite from '../assets/images/35a4abab3fe236735c69617a4d1639c88774cade.jpg';
+import benefitIcon from '../assets/images/149007892771b93575a222c349acbbb2b3f620e5.png';
+import { BenefitIconExpertise, BenefitIconSolutions, BenefitIconTransparency } from './icons/BenefitIcons';
 import './WhyChoose.css';
 
-/**
- * WhyChoose Component
- * Split layout with image + benefits list
- */
+// Each benefit now references a specific icon component so cards can show unique artwork.
 const benefits = [
   {
     title: 'Proven Expertise',
     description:
       'Our seasoned team excels in ICF products with years of successful market navigation, offering informed decisions and optimal results.',
+    Icon: BenefitIconExpertise,
   },
   {
     title: 'Customized Solutions',
     description:
-      'We pride ourselves on crafting personalised strategies to match your unique goals, ensuring a seamless latest constructions journey.',
+      'We pride ourselves on crafting personalised strategies to match your unique goals, ensuring a seamless constructions journey.',
+    Icon: BenefitIconSolutions,
   },
   {
     title: 'Transparent Partnerships',
     description:
       'Transparency is key in our client relationships. We prioritize clear communication and ethical practices, fostering trust and reliability throughout.',
+    Icon: BenefitIconTransparency,
   },
 ];
 
-const WhyChoose = () => {
-  return (
-    <section className="why-choose-section">
-      <div className="why-choose-container">
-        <div className="why-choose-image"></div>
+const WhyChoose = () => (
+  <section className="why-choose-section" aria-labelledby="why-choose-heading">
+    <div className="why-choose-media">
+      <img src={benefitIcon} alt="Ecobuild team working on site" loading="lazy" />
+    </div>
 
-        <div className="why-choose-content">
-          <span className="benefit-label">Your Benefit</span>
-          <h2 className="benefit-title">Why Choose Ecobuild System Ltd.</h2>
-          <p className="benefit-description">
-            Embarked on a global search, visiting 8 countries and reviewing 11 advanced building systems. After
-            extensive consultation with architects, contractors, and engineers, we found one solution that stood
-            out: NUDURA ICF, examining eleven different construction methods in depth.
-          </p>
-
-          <div className="benefits-list">
-            {benefits.map((item) => (
-              <article key={item.title} className="benefit-card">
-                <div className="benefit-icon" aria-hidden="true">
-                  ✓
-                </div>
-                <div>
-                  <h3 className="benefit-card-title">{item.title}</h3>
-                  <p className="benefit-card-text">{item.description}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+    <div className="why-choose-content">
+      <div className="why-choose-heading" id="why-choose-heading">
+        <span className="benefit-label">Your Benefit</span>
+        <h2>Why Choose Ecobuild System Ltd.</h2>
+        <p>
+          Embarked on a global search, visiting 8 countries and reviewing 11 advanced building systems. After extensive
+          consultation with architects, contractors, and engineers, we found one solution that stood out: NUDURA ICF,
+          examining eleven different construction methods in depth.
+        </p>
       </div>
-    </section>
-  );
-};
+
+      <div className="benefits-grid">
+        {benefits.map(({ title, description, Icon }) => (
+          <article className="benefit-card" key={title}>
+            <div className="benefit-card-icon" aria-hidden="true">
+              <Icon />
+            </div>
+            <div className="benefit-card-body">
+              <h3>{title}</h3>
+              <p>{description}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
 export default WhyChoose;
-

@@ -10,7 +10,7 @@ import './sections/Hero.css';
 const Hero = () => {
   const [productType, setProductType] = useState('All Products');
   const [sizes, setSizes] = useState('Size');
-  const [keyword, setKeyword] = useState('Search Keyword');
+  const [keyword, setKeyword] = useState('');
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -21,89 +21,88 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-background"></div>
-
+      
       <div className="hero-content">
-        <div className="hero-text">
-          <div className="hero-subtitle">
-            Nudura Insulated Concrete Forms And Panels
-          </div>
-          <h1 className="hero-title">
-            Nudura Israel<br />
-            Advanced Ecological Building Systems
-          </h1>
+      <div className="hero-text">
+        <div className="hero-subtitle">
+          Nudura Insulated Concrete Forms And Panels
         </div>
+        <h1 className="hero-title">
+          Nudura Israel<br />
+          Advanced Ecological Building Systems
+        </h1>
+      </div>
 
-        <div className="hero-buttons">
-          <button className="construction-methods-btn">
-            Construction methods.
-          </button>
-          <button className="icf-method-btn">
-            ICF method.
-          </button>
-        </div>
+      <div className="hero-buttons">
+        <button className="construction-methods-btn">
+          Construction methods.
+        </button>
+        <button className="icf-method-btn">
+          ICF method.
+        </button>
+      </div>
 
-        <div className="search-container">
-          <form className="search-form" onSubmit={handleSearch}>
-            <div className="search-field">
-              <div className="form-field type-field">
-                <div className="field-label">Product Type</div>
-                <div className="dropdown-container">
-                  <select
-                    className="dropdown"
-                    value={productType}
-                    onChange={(e) => setProductType(e.target.value)}
-                  >
-                    <option value="All Products">All Products</option>
-                    <option value="ICF Blocks">ICF Blocks</option>
-                    <option value="Panels">Panels</option>
-                    <option value="Accessories">Accessories</option>
-                  </select>
-                </div>
+      <div className="search-container">
+        <form className="search-form" onSubmit={handleSearch}>
+          <div className="search-field">
+            <div className="form-field type-field">
+              <div className="field-label">Product Type</div>
+              <div className="dropdown-container">
+                <select 
+                  className="dropdown"
+                  value={productType}
+                  onChange={(e) => setProductType(e.target.value)}
+                >
+                  <option value="All Products">All Products</option>
+                  <option value="ICF Blocks">ICF Blocks</option>
+                  <option value="Panels">Panels</option>
+                  <option value="Accessories">Accessories</option>
+                </select>
               </div>
+            </div>
 
-              <div className="form-field location-field">
-                <div className="field-label">Sizes</div>
-                <div className="dropdown-container">
-                  <select
-                    className="dropdown"
-                    value={sizes}
-                    onChange={(e) => setSizes(e.target.value)}
-                  >
-                    <option value="Size">Size</option>
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                    <option value="Large">Large</option>
-                  </select>
-                </div>
+            <div className="form-field location-field">
+              <div className="field-label">Sizes</div>
+              <div className="dropdown-container">
+                <select 
+                  className="dropdown"
+                  value={sizes}
+                  onChange={(e) => setSizes(e.target.value)}
+                >
+                  <option value="Size">Size</option>
+                  <option value="Small">Small</option>
+                  <option value="Medium">Medium</option>
+                  <option value="Large">Large</option>
+                </select>
               </div>
+            </div>
 
-              <div className="form-field keyword-field">
-                <div className="field-label">Keyword</div>
-                <div className="keyword-input-wrapper">
-                  <svg className="keyword-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <div className="form-field keyword-field">
+              <div className="field-label">Keyword</div>
+              <div className="keyword-input-wrapper">
+                <svg className="keyword-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M6 12C8.20914 12 10 10.2091 10 8C10 5.79086 8.20914 4 6 4C3.79086 4 2 5.79086 2 8C2 10.2091 3.79086 12 6 12Z" stroke="#999" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M14 14L10 10" stroke="#999" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  <input
-                    type="text"
-                    className="keyword-input"
-                    value={keyword}
-                    onChange={(e) => setKeyword(e.target.value)}
-                    onFocus={(e) => e.target.value === 'Search Keyword' && setKeyword('')}
-                    onBlur={(e) => !e.target.value && setKeyword('Search Keyword')}
-                  />
-                </div>
+                </svg>
+                <input
+                  type="text"
+                  className="keyword-input"
+                  value={keyword}
+                  placeholder="Search Keyword"
+                  onChange={(e) => setKeyword(e.target.value)}
+                />
               </div>
+            </div>
 
-              <button type="submit" className="search-button">
-                <svg className="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <button type="submit" className="search-button">
+              <svg className="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M19 19L14.65 14.65" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                <span>Search</span>
-              </button>
-            </div>
-          </form>
+              </svg>
+              <span>Search</span>
+            </button>
+          </div>
+        </form>
         </div>
       </div>
     </section>

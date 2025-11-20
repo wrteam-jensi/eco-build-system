@@ -26,7 +26,7 @@ const FloatingIcons = () => {
 
       {/* Swirl/Logo Icon - Interconnected swirl design */}
       <div className="floating-icon swirl-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M12 2C15.31 2 18 4.69 18 8C18 11.31 15.31 14 12 14C8.69 14 6 11.31 6 8C6 4.69 8.69 2 12 2Z" stroke="#345766" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M12 10C15.31 10 18 12.69 18 16C18 19.31 15.31 22 12 22C8.69 22 6 19.31 6 16C6 12.69 8.69 10 12 10Z" stroke="#345766" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           <path d="M2 12C2 8.69 4.69 6 8 6C11.31 6 14 8.69 14 12C14 15.31 11.31 18 8 18C4.69 18 2 15.31 2 12Z" stroke="#345766" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

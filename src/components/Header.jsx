@@ -52,14 +52,15 @@ const Header = () => {
             <img
               src={nuduraLogo}
               alt="Nudura logo"
-              className="logo-image nudura-logo"
+                className="logo-image ecobuild-logo"
               loading="lazy"
             />
             <div className="logo-divider" role="presentation" />
             <img
               src={ecobuildLogo}
               alt="Ecobuild logo"
-              className="logo-image ecobuild-logo"
+               className="logo-image nudura-logo"
+           
               loading="lazy"
             />
           </div>

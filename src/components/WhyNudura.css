@@ -27,6 +27,8 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 32px;
+  color: #345766;
+  font-weight: bold;
 }
 
 .why-nudura-paragraph {
@@ -34,7 +36,8 @@
   font-size: 18px;
   line-height: 160%;
   margin-bottom: 24px;
-  text-align: center;
+  text-align: left;
+  font-weight: 600;
 }
 
 .why-nudura-footnote {

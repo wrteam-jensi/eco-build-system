@@ -2,25 +2,27 @@
  * Floating Icons Component Styles
  * Exact measurements from Figma design
  * Three circular icons stacked vertically on the right side
+ * Fully responsive with proper positioning
  */
 
 /* Floating Icons Container */
 .floating-icons {
-  width: 74px;
-  position: absolute;
-  top: 334px;
-  right: 50px;
+  width: clamp(60px, 5vw, 74px);
+  position: fixed;
+  top: clamp(300px, 35vh, 400px);
+  right: clamp(16px, 2.5vw, 50px);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: clamp(8px, 1vh, 10px);
   z-index: 100;
+  pointer-events: none;
 }
 
 /* Base Floating Icon Style */
 .floating-icon {
-  width: 74px;
-  height: 74px;
-  border: 2.5px solid #345766;
+  width: clamp(60px, 5vw, 74px);
+  height: clamp(60px, 5vw, 74px);
+  border: clamp(2px, 0.3vw, 2.5px) solid #345766;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -29,6 +31,8 @@
   cursor: pointer;
   transition: all 0.2s;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+  flex-shrink: 0;
 }
 
 .floating-icon:hover {
@@ -38,8 +42,42 @@
 }
 
 .floating-icon svg {
-  width: 24px;
-  height: 24px;
+  width: clamp(20px, 2vw, 24px);
+  height: clamp(20px, 2vw, 24px);
+}
+
+/* Responsive adjustments for Floating Icons */
+@media (max-width: 1024px) {
+  .floating-icons {
+    right: clamp(12px, 2vw, 30px);
+    top: clamp(280px, 32vh, 380px);
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-icons {
+    right: clamp(8px, 1.5vw, 20px);
+    top: clamp(250px, 30vh, 350px);
+    gap: 8px;
+  }
+}
+
+@media (max-width: 520px) {
+  .floating-icons {
+    right: 8px;
+    top: clamp(200px, 25vh, 300px);
+    gap: 6px;
+  }
+
+  .floating-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .floating-icon svg {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 /* Translate Icon - Speech bubble with star/gear */

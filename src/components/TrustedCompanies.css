@@ -1,35 +1,83 @@
-/**
- * Trusted Companies Styles
+/* Trusted Companies Styles
+ * The following rules recreate the provided measurements
+ * while keeping everything fluid for small screens.
  */
-.trusted-section{
-  width:100%;
-  padding:60px 40px;
-  text-align:center;
-  background:#ffffff;
-}
-.trusted-caption{
-  font-family:'Noto Sans',sans-serif;
-  font-size:16px;
-  color:#1c3144;
-  margin-bottom:30px;
-}
-.trusted-logos{
-  max-width:1200px;
-  margin:0 auto;
-  display:flex;
-  justify-content:space-between;
-  flex-wrap:wrap;
-  gap:20px;
-}
-.trusted-logo{
-  flex:1 1 140px;
-  min-width:120px;
-  padding:20px;
-  border-radius:12px;
-  border:1px solid #e0e8f2;
-  color:#9aa5b8;
-  font-weight:600;
-  text-transform:uppercase;
-  font-size:13px;
+.trusted-section {
+  width: 100%;
+  padding: 48px 16px;
+  background: #ffffff;
+  border-top: 1px solid rgba(12, 27, 77, 0.05);
+  border-bottom: 1px solid rgba(12, 27, 77, 0.05);
 }
 
+/* Center strip and mirror Figmas 1110px width */
+.trusted-wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.trusted-caption {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #0c1b4d;
+  text-transform: none;
+}
+
+/* Match figma row of lightweight grayscale logos */
+.trusted-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 36px 48px;
+}
+
+.trusted-card {
+  width: 120px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.trusted-logo {
+  width: 110px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.trusted-logo svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.65;
+  filter: grayscale(1);
+}
+
+@media (max-width: 768px) {
+  .trusted-section {
+    padding: 36px 12px;
+  }
+
+  .trusted-grid {
+    gap: 24px 32px;
+  }
+
+  .trusted-card {
+    width: 100px;
+    height: 56px;
+  }
+
+  .trusted-logo {
+    width: 90px;
+    height: 32px;
+  }
+}
