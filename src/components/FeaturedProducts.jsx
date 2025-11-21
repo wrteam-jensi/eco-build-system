@@ -1,19 +1,24 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 import './FeaturedProducts.css';
-
+import product1 from '../assets/images/product1.jpg';
+import product2 from '../assets/images/product2.png';
+import product3 from '../assets/images/product3.png';
+import product4 from '../assets/images/product4.png';
+import product5 from '../assets/images/product5.png';
+import product6 from '../assets/images/product6.png';
 /**
  * FeaturedProducts Component
  * Displays the "Featured Products" / "Recommended for you" section
  * Shows 6 product cards in a 3x2 grid with a "View All Products" button
- * Matches Figma design specifications
+ * Matches Figma design specifications exactly
  */
 const FeaturedProducts = () => {
   // Sample product data - replace with actual data from API or props
   const products = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop',
+      image: product1,
       title: 'The Nudura ICF Series',
       details: 'Type: 4 Way Flip Size: All Sizes Shape: All Shapes',
       rating: 5,
@@ -21,7 +26,7 @@ const FeaturedProducts = () => {
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop',
+      image: product2,
       title: 'Casa Lomas De Machalí Machas',
       details: 'Type: 4 Way Flip Size: All Sizes Shape: All Shapes',
       rating: 5,
@@ -29,7 +34,7 @@ const FeaturedProducts = () => {
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop',
+      image: product3,
       title: 'Casa Lomas De Machalí Machas',
       details: 'Beds: 4 Way Flip Size: All Sizes Shape: All Shapes',
       rating: 5,
@@ -37,7 +42,7 @@ const FeaturedProducts = () => {
     },
     {
       id: 4,
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop',
+      image: product4,
       title: 'Casa Lomas De Machalí Machas',
       details: 'Beds: 4 Way Flip Size: All Sizes Shape: All Shapes',
       rating: 5,
@@ -45,7 +50,7 @@ const FeaturedProducts = () => {
     },
     {
       id: 5,
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop',
+      image: product5,
       title: 'Casa Lomas De Machalí Machas',
       details: 'Beds: 4 Way Flip Size: All Sizes Shape: All Shapes',
       rating: 5,
@@ -53,7 +58,7 @@ const FeaturedProducts = () => {
     },
     {
       id: 6,
-      image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300&fit=crop',
+      image: product6,
       title: 'Casa Lomas De Machalí Machas',
       details: 'Beds: 4 Way Flip Size: All Sizes Shape: All Shapes',
       rating: 5,
@@ -68,20 +73,25 @@ const FeaturedProducts = () => {
 
   return (
     <section className="featured-products">
-      {/* Section Header */}
+      {/* Heading Section */}
       <div className="featured-products-header">
-        <div className="featured-products-label">FEATURED PRODUCTS</div>
-        <h2 className="featured-products-title">Recommended for you</h2>
+        {/* Title Container */}
+        <div className="featured-products-title-container">
+          {/* Featured Products Label */}
+          <div className="featured-products-label">FEATURED PRODUCTS</div>
+          {/* Recommended for you Title */}
+          <h2 className="featured-products-title">Recommended for you</h2>
+        </div>
       </div>
 
-      {/* Product Grid - 3 columns, 2 rows */}
+      {/* List - Product Grid */}
       <div className="products-grid">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
 
-      {/* View All Products Button */}
+      {/* Button - View All Products */}
       <div className="view-all-container">
         <button className="view-all-button" onClick={handleViewAll}>
           <span>View All Products</span>
@@ -101,4 +111,3 @@ const FeaturedProducts = () => {
 };
 
 export default FeaturedProducts;
-

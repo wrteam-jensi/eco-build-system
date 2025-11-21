@@ -2,16 +2,16 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import FloatingIcons from './components/FloatingIcons';
-// import FeaturedProducts from './components/FeaturedProducts';
+import FeaturedProducts from './components/FeaturedProducts';
 import TrustedCompanies from './components/TrustedCompanies';
 import BuildInfo from './components/BuildInfo';
-// import BlogSection from './components/BlogSection';
+
 import WhyNudura from './components/WhyNudura';
 
 import Testimonials from './components/Testimonials';
-// import Certifications from './components/Certifications';
+import Certifications from './components/Certifications';
 import WhyChoose from './components/WhyChoose';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 import './App.css';
 
 /**
@@ -27,19 +27,15 @@ function App() {
         <Hero />
         <FloatingIcons />
       </div>
+    <FeaturedProducts />
       <WhyNudura />
+      <Certifications />
       <Testimonials />
       <WhyChoose />
       <TrustedCompanies />
       <BuildInfo />
-      {/* <FeaturedProducts />
-    
-      <BlogSection />
-    
- 
-      <Certifications />
-    
-      <Footer /> */}
+
+      <Footer />
     </div>
   );
 }

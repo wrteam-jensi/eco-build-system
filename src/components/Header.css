@@ -5,9 +5,9 @@
 
 /* Main Header Container */
 .header {
+    --gradient-start: clamp(320px, 25vw, 520px);
     width: 100%;
     max-width: 100%;
-    background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
     position: relative;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
     overflow: hidden;
@@ -17,6 +17,18 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background: #ffffff;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: var(--gradient-start);
+    width: calc(100% - var(--gradient-start));
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+    z-index: 0;
 }
 
 /* Menu Container - Main wrapper */
@@ -35,6 +47,8 @@
     padding: 0 clamp(16px, 3vw, 40px) 0 0;
     box-sizing: border-box;
     overflow: hidden;
+    background: transparent;
+    z-index: 1;
 }
 
 /* Logo Section - Left side */

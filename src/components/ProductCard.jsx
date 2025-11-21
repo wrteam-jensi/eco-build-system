@@ -1,18 +1,20 @@
 import React from 'react';
 import './ProductCard.css';
+import { YellowRating, WhiteRating, GrayRating } from './Icon';
 
 /**
  * ProductCard Component
  * Displays a single product card with image, title, details, rating, and reviews
- * Matches Figma design specifications
+ * Matches Figma design specifications exactly
  */
 const ProductCard = ({ product }) => {
   const { image, title, details, rating = 5, reviews = 45 } = product;
 
   return (
-    <div className="product-card">
-      {/* Product Image Section - White background */}
-      <div className="product-image-container">
+    <div className="product-card-wrapper">
+      <div className="product-card">
+        {/* Img - Product Image Section */}
+        <div className="product-image-container">
         <img 
           src={image} 
           alt={title}
@@ -28,38 +30,40 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
 
-      {/* Product Details Section - Light blue background */}
+      {/* Content - Product Details Section */}
       <div className="product-details">
-        <h3 className="product-title">{title}</h3>
-        <div className="product-info">{details}</div>
-        
-        {/* Rating and Reviews */}
+        {/* Main - Title and Description Container */}
+        <div className="product-main">
+          {/* The Nudura ICF Series - Title */}
+          <h3 className="product-title">{title}</h3>
+          
+          {/* Product Specifications */}
+          {details && (
+            <p className="product-specifications">{details}</p>
+          )}
+          
+          {/* Description Container */}
+          <div className="product-description">
+            {/* Line - Divider */}
+            <div className="product-divider"></div>
+          </div>
+        </div>
+
+        {/* rating - Rating and Reviews Section */}
         <div className="product-rating-section">
           <div className="product-rating">
-            {/* 5 Star Rating - All filled yellow/gold */}
-            {[...Array(5)].map((_, index) => (
-              <svg
-                key={index}
-                className="star-icon"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-              >
-                <path
-                  d="M8 0L10.1631 5.52786L16 6.11146L11.8541 9.94428L13.0557 16L8 12.5279L2.94427 16L4.1459 9.94428L0 6.11146L5.83686 5.52786L8 0Z"
-                  fill="#FFD700"
-                />
-              </svg>
+            {/* 4 Gray Stars + 1 White Star (4.5 rating) */}
+            {[...Array(4)].map((_, index) => (
+              <GrayRating key={index} />
             ))}
+            <WhiteRating />
           </div>
           <span className="product-reviews">{reviews} Reviews</span>
         </div>
       </div>
     </div>
+    </div>
   );
 };
 
 export default ProductCard;
-
-

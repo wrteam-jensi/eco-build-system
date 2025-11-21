@@ -1,98 +1,378 @@
 /**
  * Certifications Component Styles
- * Card grid with outlined cards and rounded corners
+ * "What We Do?" / "Standard Certification" section
+ * Exact measurements from Figma design
+ * Fully responsive with proper breakpoints
  */
 
+/* What We Do? Section Container */
 .certifications-section {
   width: 100%;
-  padding: 90px 40px;
-  background: #ffffff;
+  max-width: 1730px;
+  min-height: 680px;
+  margin: 0 auto;
+  padding: clamp(40px, 5vw, 80px) clamp(16px, 3vw, 40px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
+  box-sizing: border-box;
 }
 
+/* Standard Certification Title */
 .certifications-title {
-  font-family: 'Manrope', sans-serif;
-  font-size: 36px;
-  color: #1c3144;
-}
-
-.certifications-grid {
   width: 100%;
-  max-width: 1440px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  max-width: 405px;
+  height: 44px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 800;
+  font-style: ExtraBold;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #345766;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+/* Scrollable Container */
+.certifications-scroll-container {
+  width: 100%;
+  max-width: 1730px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  box-sizing: border-box;
+}
+
+.certifications-scroll-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Main Container - Single Row */
+.certifications-main {
+  width: max-content;
+  min-width: 100%;
+  min-height: 586px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+/* Certification Card Wrapper - Creates gradient border with rounded corners */
+.certification-card-wrapper {
+  width: 410px;
+  flex-shrink: 0;
+  min-height: 586px;
+  position: relative;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+  padding: 1px;
+  overflow: hidden;
+}
+
+/* Certification Card */
 .certification-card {
-  border: 2px solid #d8e6f3;
-  border-radius: 24px;
-  padding: 32px;
+  width: 100%;
+  height: 100%;
+  min-height: 584px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  background: #ffffff;
-  box-shadow: 0 10px 25px rgba(12, 35, 66, 0.08);
+  align-items: center;
+  gap: 30px;
+  border-radius: 15px;
+  padding: 50px 30px;
+  background: #FFFFFF;
+  box-sizing: border-box;
 }
 
-.certification-logo {
-  width: 72px;
-  height: 72px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #f8fbff, #e4f5ff);
+/* Image Container */
+.certification-image-container {
+  width: 100%;
+  max-width: 230px;
+  height: 182px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  color: #1c8dc6;
-  font-family: 'Manrope', sans-serif;
+  box-sizing: border-box;
 }
 
-.certification-heading {
-  font-family: 'Manrope', sans-serif;
-  font-size: 20px;
-  color: #1c3144;
+.certification-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+  display: block;
 }
 
-.certification-body {
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 15px;
-  line-height: 160%;
-  color: #5b6775;
-  flex: 1;
-}
-
-.certification-button {
-  align-self: flex-start;
-  display: inline-flex;
+/* Content Container */
+.certification-content {
+  width: 100%;
+  max-width: 350px;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-  border-radius: 999px;
-  padding: 10px 24px;
-  border: 1px solid #1c8dc6;
-  background: #ffffff;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Certification Heading */
+.certification-heading {
+  width: 100%;
+  max-width: 350px;
+  min-height: 60px;
   font-family: 'Noto Sans', sans-serif;
-  font-weight: 700;
-  color: #1c8dc6;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+  color: #161E2D;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Certification Body/Description */
+.certification-body {
+  width: 100%;
+  max-width: 350px;
+  min-height: 100px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #5C6368;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Learn More Button */
+.certification-button {
+  width: 100%;
+  max-width: 211px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 99px;
+  padding: 11px 40px;
+  background: #FFFFFF;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #161E2D;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  white-space: nowrap;
+  position: relative;
+  border: none;
+}
+
+/* Gradient border for button using wrapper approach */
+.certification-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 99px;
+  padding: 1px;
+  background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.certification-button > * {
+  position: relative;
+  z-index: 1;
 }
 
 .certification-button:hover {
-  background: #1c8dc6;
-  color: #ffffff;
+  background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+  color: #FFFFFF;
+}
+
+.certification-button:hover::before {
+  display: none;
+}
+
+.certification-button:hover .button-arrow {
+  stroke: #FFFFFF;
 }
 
 .button-arrow {
-  font-size: 16px;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  stroke: #161E2D;
+  transition: stroke 0.3s ease;
 }
 
-@media (max-width: 768px) {
-  .certification-card {
-    padding: 24px;
+/* Responsive Design - Desktop */
+@media (max-width: 1440px) {
+  .certifications-section {
+    max-width: 100%;
+  }
+
+  .certifications-scroll-container {
+    max-width: 100%;
   }
 }
 
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+  .certifications-section {
+    gap: clamp(30px, 4vw, 50px);
+  }
+
+  .certification-card-wrapper {
+    width: clamp(350px, 40vw, 410px);
+  }
+
+  .certification-card {
+    padding: clamp(30px, 4vw, 50px) clamp(20px, 3vw, 30px);
+    min-height: auto;
+  }
+
+  .certification-image-container {
+    max-width: 100%;
+    height: auto;
+    min-height: 150px;
+  }
+
+  .certification-content {
+    max-width: 100%;
+  }
+
+  .certification-heading {
+    font-size: clamp(20px, 2.5vw, 24px);
+    line-height: clamp(26px, 3vw, 30px);
+  }
+
+  .certification-body {
+    font-size: clamp(13px, 1.5vw, 14px);
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: clamp(30px, 5vw, 60px) clamp(16px, 3vw, 24px);
+    gap: clamp(30px, 4vw, 50px);
+  }
+
+  .certifications-title {
+    font-size: clamp(28px, 4vw, 36px);
+    line-height: clamp(34px, 5vw, 44px);
+    max-width: 100%;
+  }
+
+  .certification-card-wrapper {
+    width: clamp(300px, 85vw, 410px);
+  }
+
+  .certification-card {
+    padding: clamp(30px, 4vw, 50px) clamp(20px, 3vw, 30px);
+    gap: clamp(20px, 3vw, 30px);
+    min-height: auto;
+  }
+
+  .certification-image-container {
+    max-width: 100%;
+    height: auto;
+    min-height: 140px;
+  }
+
+  .certification-content {
+    max-width: 100%;
+    gap: clamp(16px, 2vw, 20px);
+  }
+
+  .certification-heading {
+    font-size: clamp(20px, 3vw, 24px);
+    line-height: clamp(26px, 4vw, 30px);
+    min-height: auto;
+  }
+
+  .certification-body {
+    font-size: clamp(13px, 2vw, 14px);
+    min-height: auto;
+  }
+
+  .certification-button {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    min-height: 54px;
+    padding: clamp(10px, 1.5vw, 11px) clamp(30px, 4vw, 40px);
+  }
+}
+
+/* Responsive Design - Mobile Small */
+@media (max-width: 480px) {
+  .certifications-section {
+    padding: 40px 16px;
+    gap: 30px;
+  }
+
+  .certifications-title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .certification-card-wrapper {
+    width: 280px;
+  }
+
+  .certification-card {
+    padding: 30px 20px;
+    gap: 24px;
+  }
+
+  .certification-image-container {
+    min-height: 120px;
+  }
+
+  .certification-content {
+    gap: 16px;
+  }
+
+  .certification-heading {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .certification-body {
+    font-size: 13px;
+  }
+
+  .certification-button {
+    padding: 10px 30px;
+  }
+}

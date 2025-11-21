@@ -1,109 +1,119 @@
 /**
  * FeaturedProducts Component Styles
- * Matches Figma design specifications
- * Light grey background, 3x2 product grid, centered layout
+ * Exact measurements from Figma design
+ * Fully responsive with proper breakpoints
  */
 
-/* Featured Products Section */
+/* RECOMMEND Section Container */
 .featured-products {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1290px;
+  min-height: 1136px;
   margin: 0 auto;
-  padding: 80px 40px;
-  background: #F5F5F5;
+  padding: clamp(40px, 5vw, 80px) clamp(16px, 3vw, 40px);
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
+  box-sizing: border-box;
 }
 
-/* Section Header */
+/* Heading Section */
 .featured-products-header {
+  width: 100%;
+  max-width: 1290px;
+  height: 72px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  text-align: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
 }
 
-/* "FEATURED PRODUCTS" Label - Small, light grey */
+/* Title Container */
+.featured-products-title-container {
+  width: 412px;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  box-sizing: border-box;
+}
+
+/* "FEATURED PRODUCTS" Label */
 .featured-products-label {
+  width: 166px;
+  height: 24px;
   font-family: 'Noto Sans', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
+  font-style: SemiBold;
   font-size: 14px;
-  line-height: 140%;
-  color: #999;
+  line-height: 24px;
+  letter-spacing: 8%;
   text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* "Recommended for you" Title - Large, dark grey, bold */
-.featured-products-title {
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 140%;
-  color: #161E2D;
+  color: #345766;
   margin: 0;
-  text-align: center;
 }
 
-/* Products Grid - 3 columns, 2 rows */
+/* "Recommended for you" Title */
+.featured-products-title {
+  width: 412px;
+  height: 44px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 800;
+  font-style: ExtraBold;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0%;
+  color: #345766;
+  margin: 0;
+}
+
+/* List Container - Product Grid */
 .products-grid {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1290px;
+  min-height: 910px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  margin: 0 auto;
-}
-
-/* Responsive: 2 columns on medium screens */
-@media (max-width: 1200px) {
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Responsive: 1 column on small screens */
-@media (max-width: 768px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .featured-products {
-    padding: 60px 20px;
-  }
-  
-  .featured-products-title {
-    font-size: 28px;
-  }
+  justify-items: center;
+  box-sizing: border-box;
 }
 
 /* View All Products Button Container */
 .view-all-container {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 0;
 }
 
-/* View All Products Button - Light blue background, white text */
+/* View All Products Button */
 .view-all-button {
+  width: 244px;
+  height: 54px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 15px 40px;
-  border-radius: 8px;
-  border: none;
+  gap: 8px;
+  border-radius: 9999px;
+  padding: 11px 20px;
   background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
+  border: none;
   cursor: pointer;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 700;
+  font-style: Bold;
   font-size: 18px;
   line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
   color: #FFFFFF;
   transition: opacity 0.2s, transform 0.2s;
+  box-sizing: border-box;
 }
 
 .view-all-button:hover {
@@ -122,4 +132,137 @@
   flex-shrink: 0;
 }
 
+/* Responsive Design - Tablet Large */
+@media (max-width: 1400px) {
+  .featured-products {
+    max-width: 100%;
+    gap: clamp(30px, 4vw, 50px);
+  }
 
+  .featured-products-header {
+    max-width: 100%;
+    height: auto;
+    min-height: 72px;
+  }
+
+  .featured-products-title-container {
+    width: 100%;
+    max-width: 412px;
+    height: auto;
+    min-height: 72px;
+  }
+
+  .featured-products-label {
+    width: auto;
+  }
+
+  .featured-products-title {
+    width: 100%;
+    max-width: 412px;
+    height: auto;
+    font-size: clamp(28px, 3vw, 36px);
+    line-height: clamp(34px, 3.5vw, 44px);
+  }
+
+  .products-grid {
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(20px, 2.5vw, 30px);
+  }
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1200px) {
+  .featured-products {
+    padding: clamp(30px, 4vw, 60px) clamp(16px, 2.5vw, 32px);
+    gap: clamp(30px, 4vw, 40px);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(20px, 2.5vw, 30px);
+  }
+
+  .featured-products-title {
+    font-size: clamp(24px, 3vw, 32px);
+    line-height: clamp(30px, 3.5vw, 40px);
+  }
+}
+
+/* Responsive Design - Mobile Large */
+@media (max-width: 768px) {
+  .featured-products {
+    padding: clamp(24px, 3vw, 40px) clamp(12px, 2vw, 20px);
+    gap: clamp(24px, 3vw, 32px);
+  }
+
+  .featured-products-header {
+    flex-direction: column;
+    gap: clamp(20px, 2.5vw, 32px);
+    align-items: center;
+    text-align: center;
+  }
+
+  .featured-products-title-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .featured-products-label {
+    text-align: center;
+  }
+
+  .featured-products-title {
+    text-align: center;
+    font-size: clamp(20px, 2.5vw, 28px);
+    line-height: clamp(26px, 3vw, 36px);
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 2.5vw, 24px);
+  }
+
+  .view-all-container {
+    justify-content: center;
+  }
+
+  .view-all-button {
+    width: 100%;
+    max-width: 244px;
+  }
+}
+
+/* Responsive Design - Mobile Small */
+@media (max-width: 480px) {
+  .featured-products {
+    padding: 20px 16px;
+    gap: 24px;
+  }
+
+  .featured-products-header {
+    gap: 16px;
+  }
+
+  .featured-products-title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .featured-products-label {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .products-grid {
+    gap: 16px;
+  }
+
+  .view-all-button {
+    width: 100%;
+    max-width: 220px;
+    height: 48px;
+    font-size: 16px;
+    padding: 10px 18px;
+  }
+}

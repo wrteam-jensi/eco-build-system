@@ -1,5 +1,4 @@
 import React from 'react';
-import buildSite from '../assets/images/35a4abab3fe236735c69617a4d1639c88774cade.jpg';
 import benefitIcon from '../assets/images/149007892771b93575a222c349acbbb2b3f620e5.png';
 import { BenefitIconExpertise, BenefitIconSolutions, BenefitIconTransparency } from './icons/BenefitIcons';
 import './WhyChoose.css';
