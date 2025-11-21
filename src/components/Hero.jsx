@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './sections/Hero.css';
+import './Hero.css';
 
 /**
  * Hero Component

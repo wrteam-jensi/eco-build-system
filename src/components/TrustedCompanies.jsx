@@ -34,6 +34,6 @@ const TrustedCompanies = () => (
     </div>
   </section>
 );
-
+  
 export default TrustedCompanies;
 
