@@ -75,7 +75,7 @@
     gap: clamp(12px, 1.5vw, 30px);
     height: 100%;
     background: #ffffff;
-    clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, calc(100% - 35px) 100%, 0 100%);
     padding: 0 clamp(12px, 2.5vw, 40px) 0 clamp(8px, 1.5vw, 16px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     position: relative;
@@ -377,8 +377,7 @@
     }
 
     .logo-panel {
-        padding-right: clamp(10px, 2vw, 28px);
-        padding-left: clamp(6px, 1.2vw, 16px);
+      
         gap: clamp(8px, 1.2vw, 20px);
         overflow: visible;
     }
@@ -700,13 +699,13 @@
     }
 
     .nudura-logo {
-        width: clamp(45px, 10vw, 90px);
-        height: clamp(14px, 2.5vw, 28px);
+        width: clamp(73px, 10vw, 90px);
+        height: clamp(20px, 2.5vw, 28px);
     }
 
     .ecobuild-logo {
-        width: clamp(60px, 18vw, 150px);
-        min-width: 45px;
+        width: clamp(60px, 37vw, 150px);
+        min-width: 80px;
         height: auto;
     }
 

@@ -5,6 +5,7 @@ import certification2 from '../assets/images/company2.png';
 import certification3 from '../assets/images/company3.jpg';
 import certification4 from '../assets/images/company4.jpg';
 import certification5 from '../assets/images/company5.jpg';
+import { LeftsideIcon } from './Icon';
 
 /**
  * Certifications Component
@@ -155,16 +156,8 @@ const Certifications = () => {
 
                   {/* Button */}
                   <button className="certification-button">
-                    <span>Learn More</span>
-                    <svg className="button-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path
-                        d="M12.5 5L17.5 10L12.5 15"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <span style={{textDecoration:'underline', fontWeight:'bold'}}>Learn More</span>
+                   <LeftsideIcon className="button-arrow" />
                   </button>
                 </div>
               </article>

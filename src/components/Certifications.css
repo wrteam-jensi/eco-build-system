@@ -227,14 +227,20 @@
   display: none;
 }
 
-.certification-button:hover .button-arrow {
+/* Arrow icon - changes to white on button hover */
+.certification-button:hover .button-arrow path {
   stroke: #FFFFFF;
+  transition: stroke 0.3s ease;
 }
 
 .button-arrow {
   width: clamp(18px, 2vw, 20px);
   height: clamp(18px, 2vw, 20px);
   flex-shrink: 0;
+  display: block;
+}
+
+.button-arrow path {
   stroke: #161E2D;
   transition: stroke 0.3s ease;
 }

@@ -18,7 +18,7 @@
 /* White line separator when Testimonials comes after WhyChoose - match Figma spacing */
 .why-choose-section + .testimonials-section {
   margin-top: 0;
-  padding-top: 0;
+  padding-top: 80;
   border-top: 1px solid #ffffff;
   padding-bottom: 100px;
 }
