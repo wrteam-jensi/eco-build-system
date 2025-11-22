@@ -14,13 +14,36 @@
 }
 
 /* Main App Layout Container - Header and Hero section */
+/* Responsive padding-top to account for fixed header height at different screen sizes */
 .app-layout {
-
   position: relative;
   overflow: hidden;
   margin: 0;
   padding: 0;
+  padding-top: 104.8px; /* Default desktop header height - matches .menu-container height */
   opacity: 1;
   flex-shrink: 0;
   width: 100%;
+}
+
+/* Responsive padding-top to match header height at different breakpoints */
+/* Tablet - header height: auto, min-height: 104.8px (can expand when menu opens) */
+@media (max-width: 792px) {
+  .app-layout {
+    padding-top: 104.8px; /* Matches .menu-container min-height: 104.8px */
+  }
+}
+
+/* Mobile - header min-height: 80px */
+@media (max-width: 768px) {
+  .app-layout {
+    padding-top: 0px; /* Matches .menu-container min-height: 80px */
+  }
+}
+
+/* Small Mobile - header min-height: 70px */
+@media (max-width: 480px) {
+  .app-layout {
+    padding-top: 0px; /* Matches .menu-container min-height: 70px */
+  }
 }
