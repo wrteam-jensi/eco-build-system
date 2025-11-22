@@ -41,10 +41,16 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.floating-icon svg {
+.floating-icon svg,
+.floating-icon img {
   width: clamp(20px, 2vw, 24px);
   height: clamp(20px, 2vw, 24px);
+  object-fit: contain;
+  display: block;
 }
+
+
+
 
 /* Responsive adjustments for Floating Icons */
 @media (max-width: 1024px) {
@@ -74,7 +80,8 @@
     height: 50px;
   }
 
-  .floating-icon svg {
+  .floating-icon svg,
+  .floating-icon img {
     width: 18px;
     height: 18px;
   }

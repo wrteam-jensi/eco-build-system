@@ -1,21 +1,20 @@
 /**
  * Certifications Component Styles
  * "What We Do?" / "Standard Certification" section
- * Exact measurements from Figma design
- * Fully responsive with proper breakpoints
+ * Fully responsive with support for all devices
  */
 
-/* What We Do? Section Container */
+/* Section Container */
 .certifications-section {
   width: 100%;
   max-width: 1730px;
-  min-height: 680px;
+  min-height: clamp(500px, 60vh, 680px);
   margin: 0 auto;
-  padding: clamp(40px, 5vw, 80px) clamp(16px, 3vw, 40px);
+  padding: clamp(32px, 5vw, 80px) clamp(16px, 3vw, 40px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  gap: clamp(30px, 4vw, 50px);
   box-sizing: border-box;
 }
 
@@ -23,12 +22,10 @@
 .certifications-title {
   width: 100%;
   max-width: 405px;
-  height: 44px;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 800;
-  font-style: ExtraBold;
-  font-size: 36px;
-  line-height: 44px;
+  font-size: clamp(28px, 4vw, 36px);
+  line-height: clamp(34px, 5vw, 44px);
   letter-spacing: 0%;
   text-align: center;
   color: #345766;
@@ -47,6 +44,8 @@
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
   box-sizing: border-box;
+  padding: 0 clamp(16px, 3vw, 40px);
+  margin: 0 -clamp(16px, 3vw, 40px);
 }
 
 .certifications-scroll-container::-webkit-scrollbar {
@@ -57,23 +56,24 @@
 .certifications-main {
   width: max-content;
   min-width: 100%;
-  min-height: 586px;
+  height: clamp(586px, 72vh, 650px);
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 30px;
+  align-items: stretch;
+  gap: clamp(20px, 2.5vw, 30px);
   box-sizing: border-box;
+  padding: 0 clamp(16px, 3vw, 40px);
 }
 
 /* Certification Card Wrapper - Creates gradient border with rounded corners */
 .certification-card-wrapper {
-  width: 410px;
+  width: clamp(280px, 35vw, 410px);
   flex-shrink: 0;
-  min-height: 586px;
+  height: clamp(586px, 72vh, 650px);
   position: relative;
-  border-radius: 16px;
+  border-radius: clamp(12px, 1.5vw, 16px);
   box-sizing: border-box;
   background: linear-gradient(0deg, rgba(0, 212, 255, 0.9) -12.5%, rgba(0, 163, 224, 0.9) 104.03%);
   padding: 1px;
@@ -84,13 +84,12 @@
 .certification-card {
   width: 100%;
   height: 100%;
-  min-height: 584px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
-  border-radius: 15px;
-  padding: 50px 30px;
+  gap: clamp(20px, 2.5vw, 30px);
+  border-radius: clamp(11px, 1.4vw, 15px);
+  padding: clamp(30px, 4vw, 50px) clamp(20px, 2.5vw, 30px);
   background: #FFFFFF;
   box-sizing: border-box;
 }
@@ -98,84 +97,88 @@
 /* Image Container */
 .certification-image-container {
   width: 100%;
-  max-width: 230px;
-  height: 182px;
+  max-width: clamp(180px, 22vw, 230px);
+  height: clamp(140px, 17vh, 182px);
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  flex-shrink: 0;
+  min-height: clamp(140px, 17vh, 182px);
 }
 
 .certification-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  border-radius: 16px;
+  border-radius: clamp(12px, 1.5vw, 16px);
   display: block;
 }
 
 /* Content Container */
 .certification-content {
   width: 100%;
-  max-width: 350px;
-  min-height: 190px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: clamp(16px, 2vw, 20px);
   box-sizing: border-box;
+  flex: 1;
+  justify-content: space-between;
 }
 
 /* Certification Heading */
 .certification-heading {
   width: 100%;
-  max-width: 350px;
-  min-height: 60px;
+  max-width: 100%;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 600;
-  font-style: SemiBold;
-  font-size: 24px;
-  line-height: 30px;
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: clamp(24px, 3vw, 30px);
   letter-spacing: 0%;
   text-align: center;
   text-transform: capitalize;
   color: #161E2D;
   margin: 0;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 /* Certification Body/Description */
 .certification-body {
   width: 100%;
-  max-width: 350px;
-  min-height: 100px;
+  max-width: 100%;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
-  font-style: Regular;
-  font-size: 14px;
+  font-size: clamp(13px, 1.5vw, 14px);
   line-height: 140%;
   letter-spacing: 0%;
   text-align: center;
   color: #5C6368;
   margin: 0;
   box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Learn More Button */
 .certification-button {
   width: 100%;
-  max-width: 211px;
-  height: 54px;
+  max-width: clamp(180px, 22vw, 211px);
+  height: clamp(48px, 5.5vw, 54px);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   border-radius: 99px;
-  padding: 11px 40px;
+  padding: clamp(10px, 1.2vw, 11px) clamp(30px, 4vw, 40px);
   background: #FFFFFF;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: clamp(13px, 1.5vw, 14px);
   color: #161E2D;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -183,6 +186,8 @@
   white-space: nowrap;
   position: relative;
   border: none;
+  flex-shrink: 0;
+  margin-top: auto;
 }
 
 /* Gradient border for button using wrapper approach */
@@ -227,15 +232,15 @@
 }
 
 .button-arrow {
-  width: 20px;
-  height: 20px;
+  width: clamp(18px, 2vw, 20px);
+  height: clamp(18px, 2vw, 20px);
   flex-shrink: 0;
   stroke: #161E2D;
   transition: stroke 0.3s ease;
 }
 
-/* Responsive Design - Desktop */
-@media (max-width: 1440px) {
+/* Responsive Design - Large Desktop */
+@media (max-width: 1620px) {
   .certifications-section {
     max-width: 100%;
   }
@@ -243,136 +248,295 @@
   .certifications-scroll-container {
     max-width: 100%;
   }
+
+  .certification-card-wrapper {
+    width: clamp(320px, 38vw, 400px);
+  }
+}
+
+/* Responsive Design - Desktop */
+@media (max-width: 1440px) {
+  .certifications-section {
+    gap: clamp(28px, 3.5vw, 45px);
+  }
+
+  .certification-card-wrapper {
+    width: clamp(300px, 36vw, 380px);
+  }
+
+  .certification-card {
+    padding: clamp(28px, 3.5vw, 45px) clamp(18px, 2.2vw, 28px);
+  }
+}
+
+/* Responsive Design - Large Tablet */
+@media (max-width: 1200px) {
+  .certifications-section {
+    min-height: clamp(450px, 55vh, 600px);
+    gap: clamp(24px, 3vw, 40px);
+  }
+
+  .certifications-main {
+    gap: clamp(18px, 2.2vw, 26px);
+  }
+
+  .certification-card-wrapper {
+    width: clamp(280px, 34vw, 360px);
+  }
+
+  .certification-card {
+    padding: clamp(26px, 3vw, 40px) clamp(16px, 2vw, 24px);
+    gap: clamp(18px, 2.2vw, 26px);
+  }
+
+  .certification-image-container {
+    max-width: clamp(160px, 20vw, 200px);
+    height: clamp(120px, 15vh, 160px);
+  }
 }
 
 /* Responsive Design - Tablet */
 @media (max-width: 1024px) {
   .certifications-section {
-    gap: clamp(30px, 4vw, 50px);
+    padding: clamp(28px, 4vw, 60px) clamp(16px, 2.5vw, 32px);
+    gap: clamp(24px, 3vw, 40px);
+  }
+
+  .certifications-scroll-container {
+    padding: 0 clamp(12px, 2vw, 24px);
+    margin: 0 -clamp(12px, 2vw, 24px);
+  }
+
+  .certifications-main {
+    gap: clamp(16px, 2vw, 24px);
+    padding: 0 clamp(12px, 2vw, 24px);
   }
 
   .certification-card-wrapper {
-    width: clamp(350px, 40vw, 410px);
+    width: clamp(260px, 32vw, 340px);
+    height: clamp(550px, 68vh, 620px);
   }
 
   .certification-card {
-    padding: clamp(30px, 4vw, 50px) clamp(20px, 3vw, 30px);
-    min-height: auto;
+    padding: clamp(24px, 3vw, 36px) clamp(16px, 2vw, 22px);
+    gap: clamp(16px, 2vw, 24px);
   }
 
   .certification-image-container {
-    max-width: 100%;
-    height: auto;
-    min-height: 150px;
+    max-width: clamp(140px, 18vw, 180px);
+    height: clamp(110px, 14vh, 150px);
   }
 
   .certification-content {
-    max-width: 100%;
-  }
-
-  .certification-heading {
-    font-size: clamp(20px, 2.5vw, 24px);
-    line-height: clamp(26px, 3vw, 30px);
-  }
-
-  .certification-body {
-    font-size: clamp(13px, 1.5vw, 14px);
+    gap: clamp(14px, 1.8vw, 18px);
+    min-height: 0;
   }
 }
 
 /* Responsive Design - Mobile */
 @media (max-width: 768px) {
   .certifications-section {
-    padding: clamp(30px, 5vw, 60px) clamp(16px, 3vw, 24px);
-    gap: clamp(30px, 4vw, 50px);
+    padding: clamp(24px, 4vw, 50px) clamp(12px, 2.5vw, 24px);
+    gap: clamp(20px, 3vw, 35px);
+    min-height: clamp(400px, 50vh, 550px);
   }
 
   .certifications-title {
-    font-size: clamp(28px, 4vw, 36px);
-    line-height: clamp(34px, 5vw, 44px);
+    font-size: clamp(24px, 3.5vw, 32px);
+    line-height: clamp(30px, 4.5vw, 40px);
     max-width: 100%;
+  }
+
+  .certifications-scroll-container {
+    padding: 0 clamp(8px, 1.5vw, 16px);
+    margin: 0 -clamp(8px, 1.5vw, 16px);
+  }
+
+  .certifications-main {
+    gap: clamp(14px, 1.8vw, 20px);
+    padding: 0 clamp(8px, 1.5vw, 16px);
+    height: clamp(520px, 65vh, 580px);
   }
 
   .certification-card-wrapper {
-    width: clamp(300px, 85vw, 410px);
+    width: clamp(260px, 80vw, 320px);
+    height: clamp(520px, 65vh, 580px);
   }
 
   .certification-card {
-    padding: clamp(30px, 4vw, 50px) clamp(20px, 3vw, 30px);
-    gap: clamp(20px, 3vw, 30px);
-    min-height: auto;
+    padding: clamp(22px, 3vw, 32px) clamp(16px, 2.2vw, 20px);
+    gap: clamp(14px, 2vw, 22px);
   }
 
   .certification-image-container {
-    max-width: 100%;
-    height: auto;
-    min-height: 140px;
+    max-width: clamp(120px, 16vw, 160px);
+    height: clamp(100px, 13vh, 140px);
   }
 
   .certification-content {
-    max-width: 100%;
-    gap: clamp(16px, 2vw, 20px);
+    gap: clamp(12px, 1.6vw, 16px);
+    min-height: 0;
   }
 
   .certification-heading {
-    font-size: clamp(20px, 3vw, 24px);
-    line-height: clamp(26px, 4vw, 30px);
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: clamp(22px, 3vw, 26px);
     min-height: auto;
   }
 
   .certification-body {
-    font-size: clamp(13px, 2vw, 14px);
+    font-size: clamp(12px, 1.6vw, 13px);
     min-height: auto;
   }
 
   .certification-button {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    min-height: 54px;
-    padding: clamp(10px, 1.5vw, 11px) clamp(30px, 4vw, 40px);
+    max-width: clamp(160px, 20vw, 200px);
+    width: auto;
+    height: clamp(44px, 5vw, 50px);
+    padding: clamp(9px, 1.1vw, 10px) clamp(24px, 3.5vw, 36px);
+    font-size: clamp(12px, 1.6vw, 13px);
   }
 }
 
-/* Responsive Design - Mobile Small */
+/* Responsive Design - Small Mobile */
 @media (max-width: 480px) {
   .certifications-section {
-    padding: 40px 16px;
-    gap: 30px;
+    padding: clamp(20px, 3vw, 40px) clamp(12px, 2vw, 16px);
+    gap: clamp(20px, 2.5vw, 30px);
+    min-height: clamp(350px, 45vh, 480px);
   }
 
   .certifications-title {
-    font-size: 28px;
-    line-height: 34px;
+    font-size: clamp(22px, 3vw, 28px);
+    line-height: clamp(28px, 3.8vw, 34px);
+  }
+
+  .certifications-scroll-container {
+    padding: 0 8px;
+    margin: 0 -8px;
+  }
+
+  .certifications-main {
+    gap: 12px;
+    padding: 0 8px;
+    height: clamp(460px, 58vh, 520px);
   }
 
   .certification-card-wrapper {
-    width: 280px;
+    width: clamp(240px, 75vw, 280px);
+    height: clamp(460px, 58vh, 520px);
   }
 
   .certification-card {
-    padding: 30px 20px;
-    gap: 24px;
+    padding: clamp(20px, 2.5vw, 28px) clamp(14px, 2vw, 18px);
+    gap: clamp(12px, 1.8vw, 20px);
   }
 
   .certification-image-container {
-    min-height: 120px;
+    max-width: clamp(100px, 14vw, 140px);
+    height: clamp(80px, 11vh, 120px);
   }
 
   .certification-content {
-    gap: 16px;
+    gap: clamp(10px, 1.4vw, 14px);
+    min-height: 0;
   }
 
   .certification-heading {
+    font-size: clamp(15px, 2vw, 18px);
+    line-height: clamp(20px, 2.8vw, 24px);
+  }
+
+  .certification-body {
+    font-size: clamp(11px, 1.4vw, 12px);
+    line-height: 1.4;
+  }
+
+  .certification-button {
+    max-width: clamp(140px, 18vw, 180px);
+    height: clamp(42px, 4.8vw, 48px);
+    padding: clamp(8px, 1vw, 9px) clamp(20px, 3vw, 28px);
+    font-size: clamp(11px, 1.4vw, 12px);
+  }
+
+  .button-arrow {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Responsive Design - Extra Small Mobile */
+@media (max-width: 360px) {
+  .certifications-section {
+    padding: 20px 12px;
+    gap: 24px;
+    min-height: 320px;
+  }
+
+  .certifications-title {
     font-size: 20px;
     line-height: 26px;
   }
 
+  .certifications-main {
+    gap: 10px;
+    padding: 0 6px;
+    height: 420px;
+  }
+
+  .certification-card-wrapper {
+    width: 220px;
+    height: 420px;
+  }
+
+  .certification-card {
+    padding: 20px 14px;
+    gap: 16px;
+  }
+
+  .certification-image-container {
+    max-width: 90px;
+    height: 70px;
+  }
+
+  .certification-heading {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   .certification-body {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .certification-button {
-    padding: 10px 30px;
+    max-width: 130px;
+    height: 40px;
+    padding: 8px 18px;
+    font-size: 11px;
+  }
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+  .certification-button {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  .certifications-scroll-container {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .certification-card-wrapper {
+    scroll-snap-align: start;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .certification-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
 }

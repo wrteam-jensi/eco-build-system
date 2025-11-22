@@ -30,8 +30,9 @@ function App() {
     <FeaturedProducts />
       <WhyNudura />
       <Certifications />
+       <WhyChoose />
       <Testimonials />
-      <WhyChoose />
+     
       <TrustedCompanies />
       <BuildInfo />
 

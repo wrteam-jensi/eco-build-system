@@ -107,6 +107,7 @@ const Hero = () => {
               </div>
 
               <button type="submit" className="hero-submit">
+                <span>Search</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                   <path
                     d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
@@ -123,7 +124,6 @@ const Hero = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span>Search</span>
               </button>
             </div>
           </form>

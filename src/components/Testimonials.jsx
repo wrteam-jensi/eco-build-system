@@ -9,6 +9,7 @@ const testimonials = [
     author: 'Cody Fisher',
     role: 'CEO Themesflat',
     color: '#f0f5fb',
+    image: 'https://i.pravatar.cc/150?img=12',
   },
   {
     quote:
@@ -16,6 +17,7 @@ const testimonials = [
     author: 'Courtney Henry',
     role: 'CEO Themesflat',
     color: '#fbecea',
+    image: 'https://i.pravatar.cc/150?img=47',
   },
   {
     quote:
@@ -23,6 +25,7 @@ const testimonials = [
     author: 'Esther Howard',
     role: 'CEO Themesflat',
     color: '#eaf6f2',
+    image: 'https://i.pravatar.cc/150?img=33',
   },
   {
     quote:
@@ -30,6 +33,7 @@ const testimonials = [
     author: 'Annette Black',
     role: 'CEO Themesflat',
     color: '#f3ecfb',
+    image: 'https://i.pravatar.cc/150?img=45',
   },
   {
     quote:
@@ -37,6 +41,7 @@ const testimonials = [
     author: 'Robert Fox',
     role: 'Operations Director',
     color: '#e7f1ff',
+    image: 'https://i.pravatar.cc/150?img=13',
   },
   {
     quote:
@@ -44,6 +49,7 @@ const testimonials = [
     author: 'Leslie Alexander',
     role: 'Founder, BuildSmart',
     color: '#fff4e6',
+    image: 'https://i.pravatar.cc/150?img=20',
   },
   {
     quote:
@@ -51,6 +57,7 @@ const testimonials = [
     author: 'Jenny Wilson',
     role: 'Sustainability Lead',
     color: '#eaf9f2',
+    image: 'https://i.pravatar.cc/150?img=24',
   },
   {
     quote:
@@ -58,6 +65,7 @@ const testimonials = [
     author: 'Kristin Watson',
     role: 'VP Construction',
     color: '#f4e9ff',
+    image: 'https://i.pravatar.cc/150?img=27',
   },
   {
     quote:
@@ -65,6 +73,7 @@ const testimonials = [
     author: 'Marvin McKinney',
     role: 'Facilities Director',
     color: '#f2f9ff',
+    image: 'https://i.pravatar.cc/150?img=15',
   },
   {
     quote:
@@ -72,6 +81,7 @@ const testimonials = [
     author: 'Kathryn Murphy',
     role: 'Chief Strategy Officer',
     color: '#fff5f0',
+    image: 'https://i.pravatar.cc/150?img=28',
   },
   {
     quote:
@@ -79,6 +89,7 @@ const testimonials = [
     author: 'Arlene McCoy',
     role: 'Project Lead',
     color: '#e9f7ff',
+    image: 'https://i.pravatar.cc/150?img=29',
   },
   {
     quote:
@@ -86,6 +97,7 @@ const testimonials = [
     author: 'Savannah Nguyen',
     role: 'Construction Manager',
     color: '#fef1ff',
+    image: 'https://i.pravatar.cc/150?img=30',
   },
   {
     quote:
@@ -93,6 +105,7 @@ const testimonials = [
     author: 'Jerome Bell',
     role: 'Owner, Lighthouse Estates',
     color: '#e8fbf2',
+    image: 'https://i.pravatar.cc/150?img=16',
   },
   {
     quote:
@@ -100,6 +113,7 @@ const testimonials = [
     author: 'Theresa Webb',
     role: 'Design Principal',
     color: '#fff7ea',
+    image: 'https://i.pravatar.cc/150?img=31',
   },
   {
     quote:
@@ -107,6 +121,7 @@ const testimonials = [
     author: 'Eleanor Pena',
     role: 'Program Director',
     color: '#eef2ff',
+    image: 'https://i.pravatar.cc/150?img=32',
   },
   {
     quote:
@@ -114,6 +129,7 @@ const testimonials = [
     author: 'Wade Warren',
     role: 'Property Manager',
     color: '#f3ffee',
+    image: 'https://i.pravatar.cc/150?img=17',
   },
   {
     quote:
@@ -121,6 +137,7 @@ const testimonials = [
     author: 'Guy Hawkins',
     role: 'Real Estate Developer',
     color: '#fef0f2',
+    image: 'https://i.pravatar.cc/150?img=18',
   },
   {
     quote:
@@ -128,6 +145,7 @@ const testimonials = [
     author: 'Courtney Aguilar',
     role: 'Operations VP',
     color: '#ecf7ff',
+    image: 'https://i.pravatar.cc/150?img=19',
   },
   {
     quote:
@@ -135,6 +153,7 @@ const testimonials = [
     author: 'Brittany Elliot',
     role: 'Head of Workplace',
     color: '#fff2ed',
+    image: 'https://i.pravatar.cc/150?img=21',
   },
   {
     quote:
@@ -142,6 +161,7 @@ const testimonials = [
     author: 'Alison Perry',
     role: 'Innovation Director',
     color: '#edf5ff',
+    image: 'https://i.pravatar.cc/150?img=22',
   },
 ];
 
@@ -179,12 +199,6 @@ const Testimonials = () => {
     return chunks;
   }, [visibleCount]);
 
-  const handlePrev = () => setCurrentSlide((prev) => Math.max(prev - 1, 0));
-  const handleNext = () => setCurrentSlide((prev) => Math.min(prev + 1, slides.length - 1));
-
-  const canPrev = currentSlide > 0;
-  const canNext = currentSlide < slides.length - 1;
-
   return (
     <section className="testimonials-section">
       <div className="testimonials-header">
@@ -211,7 +225,11 @@ const Testimonials = () => {
                   </div>
                   <p className="testimonial-text">{item.quote}</p>
                   <div className="testimonial-footer">
-                    <div className="testimonial-avatar" style={{ backgroundColor: item.color }} aria-hidden="true" />
+                    <div className="testimonial-avatar" style={{ backgroundColor: item.color }} aria-hidden="true">
+                      {item.image && (
+                        <img src={item.image} alt={item.author} className="testimonial-avatar-img" />
+                      )}
+                    </div>
                     <div className="testimonial-meta">
                       <span className="testimonial-author">{item.author}</span>
                       <span className="testimonial-role">{item.role}</span>

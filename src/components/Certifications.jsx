@@ -130,6 +130,11 @@ const Certifications = () => {
         ref={scrollContainerRef}
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => {
+          // Resume after a short delay on touch devices
+          setTimeout(() => setIsPaused(false), 2000);
+        }}
       >
         <div className="certifications-main">
           {certificationData.map((item, index) => (

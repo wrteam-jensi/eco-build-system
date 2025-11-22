@@ -15,7 +15,7 @@ const Header = () => {
   const navItems = [
     {
       label: 'Products',
-      subItems: ['ICF Blocks', 'Panels', 'Accessories'],
+   
     },
     { label: 'Information Center' },
     { label: 'Design Library' },
@@ -24,7 +24,7 @@ const Header = () => {
     { label: 'Contact Us' },
   ];
 
-  const staticChevronLabels = new Set(['Information Center', 'Design Library', 'Gallery']);
+  const staticChevronLabels = new Set(['Products','Information Center', 'Design Library', 'Gallery']);
 
   const navSubmenuId = (label) =>
     `submenu-${label.toLowerCase().replace(/\s+/g, '-')}`;
@@ -178,7 +178,7 @@ const Header = () => {
               fill="white"
             />
           </svg>
-          <span>Professional Portal</span>
+          <span className="portal-text">Professional Portal</span>
         </button>
       </div>
     </header>
